@@ -1,0 +1,84 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+local Window = Library.CreateLib("Case Simulator", "Ocean")
+
+--FirstPage
+local Tab = Window:NewTab("AutoClick")
+
+local Section = Tab:NewSection("")
+
+--AutoClicker
+Section:NewToggle("AutoClicker", "", function(state)
+    if state then
+        _G.loop = true
+        while _G.loop == true do wait()
+        local args = {[1] = "Click", [3] = 5463510}
+        game:GetService("ReplicatedStorage"):FindFirstChild("Game Objects").Remotes:FindFirstChild("525255"):FireServer(unpack(args))
+        end
+    else
+        _G.loop = false
+        while _G.loop == true do wait()
+        local args = {[1] = "Click", [3] = 5463510}
+        game:GetService("ReplicatedStorage"):FindFirstChild("Game Objects").Remotes:FindFirstChild("525255"):FireServer(unpack(args))
+        end
+    end
+end)
+
+--SecondPage
+local Tab = Window:NewTab("Upgrade")
+
+local Section = Tab:NewSection("")
+
+--UpgradeMoney
+Section:NewToggle("UpgradeMoney", "", function(state)
+    if state then
+        _G.loop = true
+        while _G.loop == true do wait()
+        local args = {[1] = "Upgrade",[2] = {[1] = "BuxPerClick",[2] = 10},[3] = 5463510}
+        game:GetService("ReplicatedStorage"):FindFirstChild("Game Objects").Remotes:FindFirstChild("525255"):FireServer(unpack(args))
+        end
+    else
+        _G.loop = false
+        while _G.loop == true do wait()
+        local args = {[1] = "Upgrade",[2] = {[1] = "BuxPerClick",[2] = 10},[3] = 5463510}
+        game:GetService("ReplicatedStorage"):FindFirstChild("Game Objects").Remotes:FindFirstChild("525255"):FireServer(unpack(args))
+        end
+    end
+end)
+
+--ThirdPage
+local Tab = Window:NewTab("Cases")
+
+local Section = Tab:NewSection("")
+
+Section:NewToggle("Tier 3 Case", "", function(state)
+    if state then
+        _G.loop = true
+        while _G.loop == true do wait()
+         local args = {
+         [1] = "OpenCase",
+         [2] = {
+         [1] = "Tier 3 Case",
+         [2] = false,
+         [3] = 1
+         },
+         [3] = 5463510
+         }
+         game:GetService("ReplicatedStorage"):FindFirstChild("Game Objects").Remotes:FindFirstChild("535749"):InvokeServer(unpack(args))
+        end
+    else
+         _G.loop = false
+         while _G.loop == true do wait()
+         local args = {
+         [1] = "OpenCase",
+         [2]  =  {
+         [1] = "Tier 3 Case",
+         [2] = false,
+         [3] = 1
+         },
+         [3] = 5463510
+         }
+        game:GetService("ReplicatedStorage"):FindFirstChild("Game Objects").Remotes:FindFirstChild("535749"):InvokeServer(unpack(args))
+        end
+    end
+end)
