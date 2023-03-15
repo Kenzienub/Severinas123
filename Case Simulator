@@ -48,7 +48,7 @@ local dependencies = {
         player_speed = 150, 
         vehicle_speed = 450,
         teleporting = true,
-        stopVelocity = false
+        stopVelocity = true
     },
     modules = {
         ui = require(replicated_storage.Module.UI),
